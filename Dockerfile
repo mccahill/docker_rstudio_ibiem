@@ -65,7 +65,7 @@ RUN rm rstudio-server-1.0.143-amd64.deb
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/knitr_1.16.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/yaml_2.1.14.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/Rcpp_0.12.11.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/Rcpp_0.12.12.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/htmltools_0.3.6.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/caTools_1.17.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/bitops_1.0-6.tar.gz \
@@ -84,7 +84,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    bitops_1.0-6.tar.gz \
    caTools_1.17.1.tar.gz \
    digest_0.6.12.tar.gz \
-   Rcpp_0.12.11.tar.gz \
+   Rcpp_0.12.12.tar.gz \
    htmltools_0.3.6.tar.gz \
    yaml_2.1.14.tar.gz \
    stringi_1.1.5.tar.gz \
@@ -107,7 +107,7 @@ RUN rm \
    stringr_1.2.0.tar.gz \
    knitr_1.16.tar.gz \
    yaml_2.1.14.tar.gz \
-   Rcpp_0.12.11.tar.gz \
+   Rcpp_0.12.12.tar.gz \
    htmltools_0.3.6.tar.gz \
    caTools_1.17.1.tar.gz \
    bitops_1.0-6.tar.gz \
@@ -139,7 +139,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/mime_0.5.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/httr_1.2.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/RCurl_1.95-4.8.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/Rcpp_0.12.11.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/Rcpp_0.12.12.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/BH_1.62.0-1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/xml2_1.1.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/curl_2.7.tar.gz \
@@ -159,7 +159,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    whisker_0.3-2.tar.gz \
    bitops_1.0-6.tar.gz \
    RCurl_1.95-4.8.tar.gz \
-   Rcpp_0.12.11.tar.gz \
+   Rcpp_0.12.12.tar.gz \
    plyr_1.8.4.tar.gz \
    R6_2.2.2.tar.gz \
    curl_2.7.tar.gz \
@@ -188,7 +188,7 @@ RUN rm \
    whisker_0.3-2.tar.gz \
    bitops_1.0-6.tar.gz \
    RCurl_1.95-4.8.tar.gz \
-   Rcpp_0.12.11.tar.gz \
+   Rcpp_0.12.12.tar.gz \
    plyr_1.8.4.tar.gz \
    R6_2.2.2.tar.gz \
    mime_0.5.tar.gz \
