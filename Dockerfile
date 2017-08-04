@@ -409,8 +409,8 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    prettyunits_1.0.2.tar.gz \
    progress_1.1.2.tar.gz \
    GGally_1.3.1.tar.gz \
-   ggformula_0.5.tar.gz \
    mosaicCore_0.2.0.tar.gz \
+   ggformula_0.5.tar.gz \
    mosaic_1.0.0.tar.gz 
 
 RUN rm \
@@ -429,8 +429,8 @@ RUN rm \
    prettyunits_1.0.2.tar.gz \
    progress_1.1.2.tar.gz \
    GGally_1.3.1.tar.gz \
-   ggformula_0.5.tar.gz \
    mosaicCore_0.2.0.tar.gz \
+   ggformula_0.5.tar.gz \
    mosaic_1.0.0.tar.gz 
 
 # Cliburn Chan requested these:
