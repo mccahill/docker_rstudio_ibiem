@@ -1,1 +1,1 @@
-sudo docker build --tag r-studio-test .
+sudo docker build --tag r-studio-ibiem-test .
