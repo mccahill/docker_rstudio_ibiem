@@ -389,7 +389,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/prettyunits_1.0.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/progress_1.1.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/GGally_1.3.1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/mosaic_0.14.4.tar.gz 
+   https://mirrors.nics.utk.edu/cran/src/contrib/mosaic_1.0.0.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    SparseM_1.77.tar.gz \
@@ -407,7 +407,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    prettyunits_1.0.2.tar.gz \
    progress_1.1.2.tar.gz \
    GGally_1.3.1.tar.gz \
-   mosaic_0.14.4.tar.gz 
+   mosaic_1.0.0.tar.gz 
 
 RUN rm \
    SparseM_1.77.tar.gz \
@@ -425,7 +425,7 @@ RUN rm \
    prettyunits_1.0.2.tar.gz \
    progress_1.1.2.tar.gz \
    GGally_1.3.1.tar.gz \
-   mosaic_0.14.4.tar.gz 
+   mosaic_1.0.0.tar.gz 
 
 # Cliburn Chan requested these:
 RUN DEBIAN_FRONTEND=noninteractive wget \
