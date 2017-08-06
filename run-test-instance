@@ -3,9 +3,9 @@
 # run the test/monitoring instance at port 443 
 #
 #
-sudo docker kill rstudio-ibiem-test-443
-sudo docker rm rstudio-ibiem-test-443
-sudo docker run --name rstudio-ibiem-test-443 \
+sudo docker kill ibiem-test-443
+sudo docker rm ibiem-test-443
+sudo docker run --name ibiem-test-443 \
      -d -p 127.0.0.1\:\:8787 \
      -e USERPASS=$STAGING_TEST_PASSWORD \
      -e VIRTUAL_HOST=labs-az-08.oit.duke.edu:443 \
