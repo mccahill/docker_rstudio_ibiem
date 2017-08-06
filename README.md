@@ -13,7 +13,7 @@ also just enough of TeX to allow knitr to generate PDF output.
 Build the container with the command:
 
 ```
-sudo docker build -t="r-studio" .
+sudo docker build -t="rstudio" .
 ```
 
 Since the build file points directly at quite a few R extensions in the CRAN 
@@ -26,7 +26,7 @@ to find the new version of the library and update the Dockerfile.
 
 Run using the default password from the Dockerfile build script:
 ```
-sudo docker run -d -p 0.0.0.0:8787:8787 -i -t r-studio
+sudo docker run -d -p 0.0.0.0:8787:8787 -i -t rstudio
 ```
 
 PROTIP: You will probably want to  something more secure than an account
@@ -34,7 +34,7 @@ named guest with the password guest, so you will probably want pass in the
 guest user password when you instance the container.
 
 ```
-docker run -d -p 0.0.0.0:8787:8787 -e USERPASS=badpassword  -i -t r-studio
+docker run -d -p 0.0.0.0:8787:8787 -e USERPASS=badpassword  -i -t rstudio
 ```
 
 You probably want the user's home directory to persist, so if the container restarts
@@ -42,7 +42,7 @@ the users' work is not blown away. To do this, map a home directory like this:
 ```
 docker run -d -e USERPASS=badpassword  \
         -v /external/directory/for/user:/home/guest \
-        -p 0.0.0.0:8787:8787 -i -t r-studio
+        -p 0.0.0.0:8787:8787 -i -t rstudio
 ```
 
 ## How to access

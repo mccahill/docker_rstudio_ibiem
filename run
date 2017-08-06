@@ -1,2 +1,2 @@
-docker run -d -p 0.0.0.0:8787:8787 -e USERPASS=badpassword  -i -t r-studio-ibiem
+docker run -d -p 0.0.0.0:8787:8787 -e USERPASS=badpassword  -i -t rstudio-ibiem
 
