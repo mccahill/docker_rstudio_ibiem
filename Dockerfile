@@ -514,6 +514,15 @@ RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
 #
 #########
 
+## BEGIN: Additional libraries for IBIEM 2017-2018 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# install gapminder for SWC module
+RUN R CMD BATCH /r-studio/install-gapminder.R
+RUN rm /install-gapminder.Rout 
+
+
+
+## END:   Additional libraries for IBIEM 2017-2018 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
 # expose the RStudio IDE port
 EXPOSE 8787 
 
