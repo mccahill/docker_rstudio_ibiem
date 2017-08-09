@@ -1,1 +1,1 @@
-sudo docker build -t="r-studio" .
+sudo docker build -t="rstudio-ibiem" .
