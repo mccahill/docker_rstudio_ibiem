@@ -540,7 +540,7 @@ RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
 # initialize script and the RStudio server. If you want to run other processes
 # add these to the supervisord.conf file
 #
-######### START customizations for IBIEM_2017_2018
+## BEGIN: Additional libraries for IBIEM 2017-2018 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 # This block ripped off from https://bitbucket.org/granek/parker_rat_lung/src/06190fd6fcac5054958f35dd37c303f538dec694/docker/Dockerfile?at=master&fileviewer=file-view-default
 # Configure environment
 ENV CONDA_DIR /opt/conda
@@ -572,14 +572,6 @@ RUN cd /tmp && \
 RUN conda install python=2.7 qiime matplotlib=1.4.3 mock nose -c bioconda && \
     conda clean -tipsy
 ##------------------------------------------------------------
-
-######### END customizations for IBIEM_2017_2018
-
-## BEGIN: Additional libraries for IBIEM 2017-2018 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-# install gapminder for SWC module
-RUN R CMD BATCH /r-studio/install-gapminder.R
-RUN rm /install-gapminder.Rout 
-
 
 
 ## END:   Additional libraries for IBIEM 2017-2018 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
