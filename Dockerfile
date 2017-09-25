@@ -573,16 +573,6 @@ RUN conda install python=2.7 qiime matplotlib=1.4.3 mock nose -c bioconda && \
     conda clean -tipsy
 ##------------------------------------------------------------
 
-
-## END:   Additional libraries for IBIEM 2017-2018 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
-## BEGIN: Additional libraries for IBIEM 2017-2018 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-# install gapminder for SWC module
-RUN R CMD BATCH /r-studio/install-gapminder.R
-RUN rm /install-gapminder.Rout 
-
-
-
 ## END:   Additional libraries for IBIEM 2017-2018 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 # expose the RStudio IDE port
