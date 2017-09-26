@@ -556,17 +556,17 @@ RUN mkdir -p $CONDA_DIR && \
 
 USER $RSTUDIO_USER
 
-# # Install conda as $RSTUDIO_USER
-# RUN cd /tmp && \
-#     mkdir -p $CONDA_DIR && \
-#     wget --quiet https://repo.continuum.io/miniconda/Miniconda3-4.1.11-Linux-x86_64.sh && \
-#     echo "efd6a9362fc6b4085f599a881d20e57de628da8c1a898c08ec82874f3bad41bf *Miniconda3-4.1.11-Linux-x86_64.sh" | sha256sum -c - && \
-#     /bin/bash Miniconda3-4.1.11-Linux-x86_64.sh -f -b -p $CONDA_DIR && \
-#     rm Miniconda3-4.1.11-Linux-x86_64.sh && \
-#     $CONDA_DIR/bin/conda install --quiet --yes conda==4.1.11 && \
-#     $CONDA_DIR/bin/conda config --system --add channels conda-forge && \
-#     $CONDA_DIR/bin/conda config --system --set auto_update_conda false && \
-#     conda clean -tipsy
+# Install conda as $RSTUDIO_USER
+RUN cd /tmp && \
+    mkdir -p $CONDA_DIR && \
+    wget --quiet https://repo.continuum.io/miniconda/Miniconda3-4.1.11-Linux-x86_64.sh && \
+    echo "efd6a9362fc6b4085f599a881d20e57de628da8c1a898c08ec82874f3bad41bf *Miniconda3-4.1.11-Linux-x86_64.sh" | sha256sum -c - && \
+    /bin/bash Miniconda3-4.1.11-Linux-x86_64.sh -f -b -p $CONDA_DIR && \
+    rm Miniconda3-4.1.11-Linux-x86_64.sh && \
+    $CONDA_DIR/bin/conda install --quiet --yes conda==4.1.11 && \
+    $CONDA_DIR/bin/conda config --system --add channels conda-forge && \
+    $CONDA_DIR/bin/conda config --system --set auto_update_conda false && \
+    conda clean -tipsy
 
 # # Install qiime1 notebook as $RSTUDIO_USER
 # RUN conda install python=2.7 qiime matplotlib=1.4.3 mock nose -c bioconda && \
