@@ -575,6 +575,9 @@ USER $RSTUDIO_USER
 
 # ## END:   Additional libraries for IBIEM 2017-2018 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
+# Switch back to root to start up server
+USER root
+
 # expose the RStudio IDE port
 EXPOSE 8787 
 
