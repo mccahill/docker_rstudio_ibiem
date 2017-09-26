@@ -540,21 +540,21 @@ RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
 # initialize script and the RStudio server. If you want to run other processes
 # add these to the supervisord.conf file
 #
-# ## BEGIN: Additional libraries for IBIEM 2017-2018 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-# # This block ripped off from https://bitbucket.org/granek/parker_rat_lung/src/06190fd6fcac5054958f35dd37c303f538dec694/docker/Dockerfile?at=master&fileviewer=file-view-default
-# # Configure environment
-# ENV CONDA_DIR /opt/conda
-# ENV PATH $CONDA_DIR/bin:$PATH
-# ENV SHELL /bin/bash
-# ENV LC_ALL en_US.UTF-8
-# ENV LANG en_US.UTF-8
-# ENV LANGUAGE en_US.UTF-8
-# ENV RSTUDIO_USER guest
+## BEGIN: Additional libraries for IBIEM 2017-2018 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# This block ripped off from https://bitbucket.org/granek/parker_rat_lung/src/06190fd6fcac5054958f35dd37c303f538dec694/docker/Dockerfile?at=master&fileviewer=file-view-default
+# Configure environment
+ENV CONDA_DIR /opt/conda
+ENV PATH $CONDA_DIR/bin:$PATH
+ENV SHELL /bin/bash
+ENV LC_ALL en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
+ENV RSTUDIO_USER guest
 
-# RUN mkdir -p $CONDA_DIR && \
-#     chown $RSTUDIO_USER $CONDA_DIR
+RUN mkdir -p $CONDA_DIR && \
+    chown $RSTUDIO_USER $CONDA_DIR
 
-# USER $RSTUDIO_USER
+USER $RSTUDIO_USER
 
 # # Install conda as $RSTUDIO_USER
 # RUN cd /tmp && \
