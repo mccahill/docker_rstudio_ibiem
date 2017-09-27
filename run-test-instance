@@ -8,7 +8,9 @@ sudo docker rm ibiem-test-443
 sudo docker run --name ibiem-test-443 \
      -d -p 127.0.0.1\:\:8787 \
      -e USERPASS=$STAGING_TEST_PASSWORD \
-     -e VIRTUAL_HOST=labs-az-08.oit.duke.edu:443 \
+     -e VIRTUAL_HOST=labs-az-09.oit.duke.edu:443 \
      -e MAP_VIRTUAL_PORT=443 \
      -v /srv/persistent-data/homedirs/monitoring-user\:/home/guest \
+     -v /srv/persistent-data/homedirs/sharedspace-rstudio\:/sharedspace \
+     -v /srv/persistent-data/homedirs/instructorspace-rstudio\:/data:ro \
      -i -t rstudio-ibiem-test
