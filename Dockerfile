@@ -541,6 +541,9 @@ RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
 # add these to the supervisord.conf file
 #
 ## BEGIN: Additional libraries for IBIEM 2017-2018 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
+   seqtk
+
 # This block ripped off from https://bitbucket.org/granek/parker_rat_lung/src/06190fd6fcac5054958f35dd37c303f538dec694/docker/Dockerfile?at=master&fileviewer=file-view-default
 # Configure environment
 ENV CONDA_DIR /opt/conda
@@ -574,8 +577,6 @@ RUN cd /tmp && \
 #     conda clean -tipsy
 # ##------------------------------------------------------------
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
-   seqtk
    
 # ## END:   Additional libraries for IBIEM 2017-2018 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
