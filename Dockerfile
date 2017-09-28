@@ -574,6 +574,9 @@ RUN cd /tmp && \
 #     conda clean -tipsy
 # ##------------------------------------------------------------
 
+RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
+   seqtk
+   
 # ## END:   Additional libraries for IBIEM 2017-2018 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 # Switch back to root to start up server
