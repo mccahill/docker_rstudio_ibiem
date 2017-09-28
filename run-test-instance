@@ -12,5 +12,5 @@ sudo docker run --name ibiem-test-443 \
      -e MAP_VIRTUAL_PORT=443 \
      -v /srv/persistent-data/homedirs/monitoring-user\:/home/guest \
      -v /srv/persistent-data/homedirs/sharedspace-rstudio\:/sharedspace \
-     -v /srv/persistent-data/homedirs/instructorspace-rstudio\:/data:ro \
+     -v /srv/persistent-data/homedirs/instructorspace-rstudio\:/data \
      -i -t rstudio-ibiem-test
