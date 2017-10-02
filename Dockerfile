@@ -543,7 +543,9 @@ RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
 ## BEGIN: Additional libraries for IBIEM 2017-2018 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
    seqtk \
-   ea-utils
+   ea-utils \
+   chimeraslayer
+
 
 # This block ripped off from https://bitbucket.org/granek/parker_rat_lung/src/06190fd6fcac5054958f35dd37c303f538dec694/docker/Dockerfile?at=master&fileviewer=file-view-default
 # Configure environment
