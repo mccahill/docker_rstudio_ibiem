@@ -550,7 +550,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
 # This block ripped off from https://bitbucket.org/granek/parker_rat_lung/src/06190fd6fcac5054958f35dd37c303f538dec694/docker/Dockerfile?at=master&fileviewer=file-view-default
 # Configure environment
 ENV CONDA_DIR /opt/conda
-ENV PATH $CONDA_DIR/bin:$PATH
+ENV PATH $CONDA_DIR/bin:$PATH:/usr/lib/ChimeraSlayer
 ENV SHELL /bin/bash
 ENV LC_ALL en_US.UTF-8
 ENV LANG en_US.UTF-8
