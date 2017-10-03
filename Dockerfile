@@ -544,7 +544,8 @@ RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
 RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
    seqtk \
    ea-utils \
-   chimeraslayer
+   chimeraslayer \
+   sra-toolkit
 
 
 # This block ripped off from https://bitbucket.org/granek/parker_rat_lung/src/06190fd6fcac5054958f35dd37c303f538dec694/docker/Dockerfile?at=master&fileviewer=file-view-default
