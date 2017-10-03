@@ -541,16 +541,12 @@ RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
 # add these to the supervisord.conf file
 #
 ## BEGIN: Additional libraries for IBIEM 2017-2018 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-# NO_PUBKEY 8B48AD6246925553
-gpg --keyserver pgpkeys.mit.edu --recv-key 8B48AD6246925553
-gpg -a --export 8B48AD6246925553 | apt-key add -
-
-# NO_PUBKEY 7638D0442B90D010
-gpg --keyserver pgpkeys.mit.edu --recv-key 7638D0442B90D010
-gpg -a --export 7638D0442B90D010 | apt-key add -
-
-
 RUN echo "deb http://ftp.debian.org/debian jessie-backports main" >  /etc/apt/sources.list.d/backports.list && \
+    # NO_PUBKEY 8B48AD6246925553
+    gpg --keyserver pgpkeys.mit.edu --recv-key 8B48AD6246925553 && \
+    gpg -a --export 8B48AD6246925553 | apt-key add - && \
+    gpg --keyserver pgpkeys.mit.edu --recv-key 7638D0442B90D010 && \
+    gpg -a --export 7638D0442B90D010 | apt-key add - && \
     apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get -t jessie-backports install -y --no-install-recommends \
     seqtk \
