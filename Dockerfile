@@ -548,7 +548,7 @@ RUN echo "deb http://ftp.debian.org/debian jessie-backports main" >  /etc/apt/so
     gpg --keyserver pgpkeys.mit.edu --recv-key 7638D0442B90D010 && \
     gpg -a --export 7638D0442B90D010 | apt-key add - && \
     apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get -t jessie-backports install -y --no-install-recommends \
+    DEBIAN_FRONTEND=noninteractive apt-get -t jessie-backports install -y \
     seqtk \
     ea-utils \
     chimeraslayer \
