@@ -547,20 +547,11 @@ RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
 # add these to the supervisord.conf file
 #
 ## BEGIN: Additional libraries for IBIEM 2017-2018 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-RUN echo "deb http://ftp.debian.org/debian jessie-backports main" >  /etc/apt/sources.list.d/backports.list && \
-    # NO_PUBKEY 8B48AD6246925553
-    gpg --keyserver pgpkeys.mit.edu --recv-key 8B48AD6246925553 && \
-    gpg -a --export 8B48AD6246925553 | apt-key add - && \
-    gpg --keyserver pgpkeys.mit.edu --recv-key 7638D0442B90D010 && \
-    gpg -a --export 7638D0442B90D010 | apt-key add - && \
-    apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get -t jessie-backports install -y \
-    seqtk \
-    ea-utils \
-    chimeraslayer \
-    sra-toolkit \
-    && apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
+   seqtk \
+   ea-utils \
+   chimeraslayer
+
 
 # This block ripped off from https://bitbucket.org/granek/parker_rat_lung/src/06190fd6fcac5054958f35dd37c303f538dec694/docker/Dockerfile?at=master&fileviewer=file-view-default
 # Configure environment
