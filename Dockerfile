@@ -288,14 +288,14 @@ RUN rm \
   
 # more libraries Mine Cetinakya-Rundel asked for
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   https://mirrors.nics.utk.edu/cran/src/contrib/openintro_1.4.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/openintro_1.7.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/tibble_1.3.4.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/bindr_0.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/bindrcpp_0.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/glue_1.1.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/pkgconfig_2.0.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/plogr_0.1-1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/dplyr_0.7.2.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/dplyr_0.7.4.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/assertthat_0.2.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/R6_2.2.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/magrittr_1.5.tar.gz \
@@ -305,7 +305,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
-   openintro_1.4.tar.gz \
+   openintro_1.7.1.tar.gz \
    assertthat_0.2.0.tar.gz \
    R6_2.2.2.tar.gz \
    magrittr_1.5.tar.gz \
@@ -317,10 +317,10 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    plogr_0.1-1.tar.gz \
    bindr_0.1.tar.gz \
    bindrcpp_0.2.tar.gz \
-   dplyr_0.7.2.tar.gz 
+   dplyr_0.7.4.tar.gz 
 
 RUN rm \
-   openintro_1.4.tar.gz \
+   openintro_1.7.1.tar.gz \
    assertthat_0.2.0.tar.gz \
    R6_2.2.2.tar.gz \
    magrittr_1.5.tar.gz \
@@ -332,7 +332,7 @@ RUN rm \
    glue_1.1.1.tar.gz \
    pkgconfig_2.0.1.tar.gz \
    plogr_0.1-1.tar.gz \
-   dplyr_0.7.2.tar.gz 
+   dplyr_0.7.4.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/chron_2.3-50.tar.gz \
