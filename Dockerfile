@@ -124,8 +124,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
 
 # R packages we need for devtools - and we need devtools to be able to update the rmarkdown package
 RUN DEBIAN_FRONTEND=noninteractive wget \
-   https://mirrors.nics.utk.edu/cran/src/contrib/rstudioapi_0.6.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/openssl_0.9.6.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/rstudioapi_0.7.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/openssl_0.9.7.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/withr_2.0.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/brew_1.0-6.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/stringi_1.1.5.tar.gz \
@@ -137,12 +137,12 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/devtools_1.13.3.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/R6_2.2.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/mime_0.5.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/httr_1.2.1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/httr_1.3.1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/RCurl_1.95-4.8.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/Rcpp_0.12.13.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/BH_1.62.0-1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/BH_1.65.0-1.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/xml2_1.1.1.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/curl_2.8.1.tar.gz \
+   https://mirrors.nics.utk.edu/cran/src/contrib/curl_3.0.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/jsonlite_1.5.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/digest_0.6.12.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/downloader_0.4.tar.gz \
@@ -162,11 +162,11 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    Rcpp_0.12.13.tar.gz \
    plyr_1.8.4.tar.gz \
    R6_2.2.2.tar.gz \
-   curl_2.8.1.tar.gz \
-   openssl_0.9.6.tar.gz \
+   curl_3.0.tar.gz \
+   openssl_0.9.7.tar.gz \
    mime_0.5.tar.gz \
-   httr_1.2.1.tar.gz \
-   rstudioapi_0.6.tar.gz \
+   httr_1.3.1.tar.gz \
+   rstudioapi_0.7.tar.gz \
    withr_2.0.0.tar.gz \
    git2r_0.19.0.tar.gz \
    devtools_1.13.3.tar.gz \
@@ -176,7 +176,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    stringr_1.2.0.tar.gz \
    roxygen2_5.0.1.tar.gz \
    XML_3.98-1.9.tar.gz \
-   BH_1.62.0-1.tar.gz \
+   BH_1.65.0-1.tar.gz \
    xml2_1.1.1.tar.gz \
    rversions_1.0.3.tar.gz \
    downloader_0.4.tar.gz
@@ -192,19 +192,19 @@ RUN rm \
    plyr_1.8.4.tar.gz \
    R6_2.2.2.tar.gz \
    mime_0.5.tar.gz \
-   httr_1.2.1.tar.gz \
-   rstudioapi_0.6.tar.gz \
-   openssl_0.9.6.tar.gz \
+   httr_1.3.1.tar.gz \
+   rstudioapi_0.7.tar.gz \
+   openssl_0.9.7.tar.gz \
    withr_2.0.0.tar.gz \
    brew_1.0-6.tar.gz \
    stringi_1.1.5.tar.gz \
    magrittr_1.5.tar.gz \
    stringr_1.2.0.tar.gz \
    roxygen2_5.0.1.tar.gz \
-   BH_1.62.0-1.tar.gz \
+   BH_1.65.0-1.tar.gz \
    XML_3.98-1.9.tar.gz \
    xml2_1.1.1.tar.gz \
-   curl_2.8.1.tar.gz \
+   curl_3.0.tar.gz \
    rversions_1.0.3.tar.gz \
    git2r_0.19.0.tar.gz \
    devtools_1.13.3.tar.gz \
