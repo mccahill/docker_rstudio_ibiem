@@ -397,7 +397,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget \
    https://mirrors.nics.utk.edu/cran/src/contrib/GGally_1.3.2.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/ggformula_0.6.tar.gz \
    https://mirrors.nics.utk.edu/cran/src/contrib/mosaicCore_0.4.0.tar.gz \
-   https://mirrors.nics.utk.edu/cran/src/contrib/mosaic_1.0.3.tar.gz 
+   https://mirrors.nics.utk.edu/cran/src/contrib/mosaic_1.1.0.tar.gz 
 
 RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    SparseM_1.77.tar.gz \
@@ -417,7 +417,7 @@ RUN DEBIAN_FRONTEND=noninteractive R CMD INSTALL \
    GGally_1.3.2.tar.gz \
    mosaicCore_0.4.0.tar.gz \
    ggformula_0.6.tar.gz \
-   mosaic_1.0.3.tar.gz 
+   mosaic_1.1.0.tar.gz 
 
 RUN rm \
    SparseM_1.77.tar.gz \
@@ -437,7 +437,7 @@ RUN rm \
    GGally_1.3.2.tar.gz \
    mosaicCore_0.4.0.tar.gz \
    ggformula_0.6.tar.gz \
-   mosaic_1.0.3.tar.gz 
+   mosaic_1.1.0.tar.gz 
 
 # Cliburn Chan requested these:
 RUN DEBIAN_FRONTEND=noninteractive wget \
