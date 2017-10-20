@@ -586,6 +586,9 @@ RUN cd /tmp && \
     $CONDA_DIR/bin/conda config --system --set auto_update_conda false && \
     conda clean -tipsy
 
+# set up link so vsearch can masquerade as usearch61
+ln -s $CONDA_DIR/bin/vsearch $CONDA_DIR/bin/usearch61
+
 # # Install qiime1 notebook as $RSTUDIO_USER
 # RUN conda install python=2.7 qiime matplotlib=1.4.3 mock nose -c bioconda && \
 #     conda clean -tipsy
