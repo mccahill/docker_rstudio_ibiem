@@ -594,6 +594,13 @@ RUN cd /tmp && \
     $CONDA_DIR/bin/conda config --system --set auto_update_conda false && \
     conda clean -tipsy
 
+# Install qiime2
+RUN cd /tmp && \
+    wget --quiet https://data.qiime2.org/distro/core/qiime2-2018.2-py35-linux-conda.yml && \
+    $CONDA_DIR/bin/conda env create -n qiime2-2018.2 --file qiime2-2018.2-py35-linux-conda.yml && \
+    rm qiime2-2018.2-py35-linux-conda.yml && \
+    conda clean -tipsy
+
 # set up link so vsearch can masquerade as usearch61
 RUN ln -s $CONDA_DIR/bin/vsearch $CONDA_DIR/bin/usearch61
 
