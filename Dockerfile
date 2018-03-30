@@ -556,7 +556,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get  install -y \
    ea-utils \
    chimeraslayer \
    tmux \
-   jove
+   jove \
+   raxml
 
 
 # This block ripped off from https://bitbucket.org/granek/parker_rat_lung/src/06190fd6fcac5054958f35dd37c303f538dec694/docker/Dockerfile?at=master&fileviewer=file-view-default
@@ -573,7 +574,7 @@ RUN mkdir -p $CONDA_DIR && \
     chown $RSTUDIO_USER $CONDA_DIR
     
 #  Add microbiome specific R and bioconductor packages
-RUN Rscript -e "install.packages(pkgs = c('argparse','phangorn'), \
+RUN Rscript -e "install.packages(pkgs = c('argparse','phangorn','ips'), \
     repos='https://cran.revolutionanalytics.com/', \
     dependencies=TRUE)" && \
     Rscript -e "source('https://bioconductor.org/biocLite.R'); \
