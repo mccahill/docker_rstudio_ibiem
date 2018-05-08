@@ -1,0 +1,5 @@
+#!/bin/bash
+echo 'regression test running'
+#
+# do some testing and return an erro if there is a problem
+#

@@ -18,6 +18,7 @@ build:
   script: 
     - echo "Building the app in staging"
     - ./build-test
+    - ./regression-test
 
 deploy_staging:
   tags: 
